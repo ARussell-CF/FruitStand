@@ -6,6 +6,10 @@ function checkStand() {
     let fruitOne = document.getElementById("fruitOne").value;
     let fruitTwo = document.getElementById("fruitTwo").value;
     let fruitThree = document.getElementById("fruitThree").value;
+    //In case they are running multiple searches clear out the old output
+    document.getElementById("outputOne").innerText = "";
+    document.getElementById("outputTwo").innerText = "";
+    document.getElementById("outputThree").innerText = "";
 
     //check that there is at least one letter in the input
     if (fruitOne.length > 0) {
@@ -57,6 +61,9 @@ function checkStand() {
 }
 
 function clearForm() {
+    document.getElementById("outputOne").innerText = "Just waiting for you to type in some fruit";
+    document.getElementById("outputTwo").innerText = "";
+    document.getElementById("outputThree").innerText = "";
     let form = document.getElementById("checkForm");
     form.reset();
 }
